@@ -60,7 +60,10 @@ const AboutTabs = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator
+        initialRouteName="Home"
+        screenOptions={{ drawerActiveTintColor: "purple" }}
+      >
         <Drawer.Screen name="Home" component={AboutTabs} />
         <Drawer.Screen name="Sign Up" component={SignUpScreen} />
         <Drawer.Screen name="Sign In" component={SignInScreen} />

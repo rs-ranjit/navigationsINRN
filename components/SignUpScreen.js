@@ -13,12 +13,12 @@ export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "black",
+    backgroundColor: "lavender",
     flex: 1,
     justifyContent: "center",
   },
   text: {
-    color: "white",
+    color: "purple",
     textAlign: "center",
     fontSize: 40,
   },
