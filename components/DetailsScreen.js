@@ -1,6 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const DetailsScreen = () => {
   const navigation = useNavigation();
@@ -33,10 +37,10 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: "purple",
-    padding: 10,
-    width: 300,
-    marginLeft: 60,
-    marginTop: 50,
+    padding: wp(3),
+    width: hp(30),
+    marginLeft: hp(40),
+    marginTop: hp(10),
     borderRadius: 7,
   },
 });

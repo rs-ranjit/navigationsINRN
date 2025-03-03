@@ -35,8 +35,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={wp(4)} color={color} />
+            <Ionicons name="home" size={wp(5)} color={color} />
           ),
+          tabBarLabelStyle: { fontSize: wp(3) },
         }}
       />
       <Tabs.Screen
@@ -45,8 +46,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person" size={wp(4)} color={color} />
+            <Ionicons name="person" size={wp(5)} color={color} />
           ),
+          tabBarLabelStyle: { fontSize: wp(3) },
         }}
       />
       <Tabs.Screen
@@ -55,8 +57,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="settings" size={wp(4)} color={color} />
+            <Ionicons name="settings" size={wp(5)} color={color} />
           ),
+          tabBarLabelStyle: { fontSize: wp(3) },
         }}
       />
     </Tabs.Navigator>
@@ -68,21 +71,23 @@ const App = () => {
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
-        screenOptions={{
-          drawerContentStyle: { backgroundColor: "yellow" },
-          drawerActiveTintColor: "green",
-        }}
+        screenOptions={styles.screenOptions}
       >
         <Drawer.Screen
           name="Home"
           component={AboutTabs}
-          options={{
-            title: "Main",
-            drawerLabel: "Home",
-          }}
+          options={styles.Home}
         />
-        <Drawer.Screen name="Sign Up" component={SignUpScreen} />
-        <Drawer.Screen name="Sign In" component={SignInScreen} />
+        <Drawer.Screen
+          name="Sign Up"
+          component={SignUpScreen}
+          options={styles.drawerLabel}
+        />
+        <Drawer.Screen
+          name="Sign In"
+          component={SignInScreen}
+          options={styles.drawerLabel}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -90,4 +95,27 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screenOptions: {
+    drawerContentStyle: { backgroundColor: "yellow" },
+    drawerLabelStyle: {
+      fontSize: hp(3),
+      paddingTop: wp(4),
+      paddingBottom: wp(2),
+      textAlign: "center",
+    },
+    drawerActiveTintColor: "green",
+  },
+  Home: {
+    title: "Main",
+    drawerLabel: "Home",
+    headerTitleAlign: "center",
+    headerTitleStyle: {
+      fontSize: hp(4),
+    },
+  },
+  drawerLabel: {
+    headerTitleAlign: "center",
+    headerTitleStyle: { fontSize: hp(4) },
+  },
+});

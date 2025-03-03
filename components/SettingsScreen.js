@@ -1,5 +1,9 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const SettingsScreen = ({ navigation }) => {
   return (
@@ -26,14 +30,14 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     textAlign: "center",
-    fontSize: 40,
+    fontSize: wp(6),
   },
   button: {
     backgroundColor: "purple",
-    padding: 10,
-    width: 200,
-    marginLeft: 100,
-    marginTop: 50,
+    padding: wp(3),
+    width: hp(20),
+    marginLeft: hp(40),
+    marginTop: hp(10),
     borderRadius: 7,
   },
 });

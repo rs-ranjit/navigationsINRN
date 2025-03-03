@@ -1,5 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const LoginScreen = () => {
   return (
@@ -20,6 +24,6 @@ const styles = StyleSheet.create({
   text: {
     color: "purple",
     textAlign: "center",
-    fontSize: 40,
+    fontSize: wp("10"),
   },
 });
