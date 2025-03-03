@@ -35,9 +35,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={wp(3)} color={color} />
+            <Ionicons name="home" size={wp(4)} color={color} />
           ),
-          tabBarLabelStyle: { fontSize: wp(3) },
+          tabBarLabelStyle: { fontSize: wp(4) },
         }}
       />
       <Tabs.Screen
@@ -46,9 +46,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person" size={wp(3)} color={color} />
+            <Ionicons name="person" size={wp(4)} color={color} />
           ),
-          tabBarLabelStyle: { fontSize: wp(3) },
+          tabBarLabelStyle: { fontSize: wp(4) },
         }}
       />
       <Tabs.Screen
@@ -57,9 +57,9 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="settings" size={wp(3)} color={color} />
+            <Ionicons name="settings" size={wp(4)} color={color} />
           ),
-          tabBarLabelStyle: { fontSize: wp(3) },
+          tabBarLabelStyle: { fontSize: wp(4) },
         }}
       />
     </Tabs.Navigator>

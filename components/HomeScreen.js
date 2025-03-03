@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   text: {
-    color: "white",
+    color: "black",
     textAlign: "center",
     fontSize: wp(4),
   },
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: "purple",
     padding: wp(3),
     width: hp(20),
-    marginLeft: hp(24),
+    marginLeft: hp(14),
     marginTop: hp(10),
     borderRadius: 7,
   },
