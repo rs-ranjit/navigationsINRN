@@ -10,6 +10,10 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import SignUpScreen from "./components/SignUpScreen";
 import SignInScreen from "./components/SignInScreen";
 import "react-native-gesture-handler";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const Tabs = createBottomTabNavigator();
 
@@ -21,6 +25,8 @@ const AboutTabs = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: "purple",
+        tabBarLabelPosition: "beside-icon",
+        // tabBarShowLabel: false,
       }}
     >
       <Tabs.Screen
@@ -29,7 +35,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={20} color={color} />
+            <Ionicons name="home" size={wp(4)} color={color} />
           ),
         }}
       />
@@ -39,7 +45,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person" size={20} color={color} />
+            <Ionicons name="person" size={wp(4)} color={color} />
           ),
         }}
       />
@@ -49,7 +55,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="settings" size={20} color={color} />
+            <Ionicons name="settings" size={wp(4)} color={color} />
           ),
         }}
       />
@@ -62,9 +68,19 @@ const App = () => {
     <NavigationContainer>
       <Drawer.Navigator
         initialRouteName="Home"
-        screenOptions={{ drawerActiveTintColor: "purple" }}
+        screenOptions={{
+          drawerContentStyle: { backgroundColor: "yellow" },
+          drawerActiveTintColor: "green",
+        }}
       >
-        <Drawer.Screen name="Home" component={AboutTabs} />
+        <Drawer.Screen
+          name="Home"
+          component={AboutTabs}
+          options={{
+            title: "Main",
+            drawerLabel: "Home",
+          }}
+        />
         <Drawer.Screen name="Sign Up" component={SignUpScreen} />
         <Drawer.Screen name="Sign In" component={SignInScreen} />
       </Drawer.Navigator>
