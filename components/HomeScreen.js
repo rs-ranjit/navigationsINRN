@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     textAlign: "center",
-    fontSize: wp(6),
+    fontSize: wp(4),
   },
   button: {
     backgroundColor: "purple",
     padding: wp(3),
     width: hp(20),
-    marginLeft: hp(40),
+    marginLeft: hp(24),
     marginTop: hp(10),
     borderRadius: 7,
   },

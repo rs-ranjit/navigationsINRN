@@ -35,7 +35,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="home" size={wp(5)} color={color} />
+            <Ionicons name="home" size={wp(3)} color={color} />
           ),
           tabBarLabelStyle: { fontSize: wp(3) },
         }}
@@ -46,7 +46,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="person" size={wp(5)} color={color} />
+            <Ionicons name="person" size={wp(3)} color={color} />
           ),
           tabBarLabelStyle: { fontSize: wp(3) },
         }}
@@ -57,7 +57,7 @@ const AboutTabs = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name="settings" size={wp(5)} color={color} />
+            <Ionicons name="settings" size={wp(3)} color={color} />
           ),
           tabBarLabelStyle: { fontSize: wp(3) },
         }}
@@ -97,25 +97,25 @@ export default App;
 
 const styles = StyleSheet.create({
   screenOptions: {
-    drawerContentStyle: { backgroundColor: "yellow" },
+    drawerContentStyle: { backgroundColor: "lavender" },
     drawerLabelStyle: {
-      fontSize: hp(3),
+      fontSize: hp(2),
       paddingTop: wp(4),
       paddingBottom: wp(2),
       textAlign: "center",
     },
-    drawerActiveTintColor: "green",
+    drawerActiveTintColor: "grey",
   },
   Home: {
     title: "Main",
     drawerLabel: "Home",
     headerTitleAlign: "center",
     headerTitleStyle: {
-      fontSize: hp(4),
+      fontSize: hp(2),
     },
   },
   drawerLabel: {
     headerTitleAlign: "center",
-    headerTitleStyle: { fontSize: hp(4) },
+    headerTitleStyle: { fontSize: hp(2) },
   },
 });
